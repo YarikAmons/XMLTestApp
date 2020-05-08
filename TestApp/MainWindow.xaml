@@ -1,0 +1,41 @@
+﻿<Window x:Class="TestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestApp"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="XMLSync Comparer" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="Left" Content="Upload Left Xml file" Height="25" Grid.Column="1" VerticalAlignment="Top" Margin="99,10,99,0" Click="Left_Click"/>
+            <ListBox Grid.Column="1" Name="LeftFile" Margin="0,39,0,0"></ListBox>
+            <ListBox Grid.Column="2" Name="RightFile" Margin="0,39,0,0"></ListBox>
+            <Button x:Name="Right" Content="Upload Right Xml file" Height="25" Grid.Column="2" VerticalAlignment="Top" Margin="99,10,99,0" Click="Right_Click"/>
+        </Grid>
+        <Grid Grid.Row="1" Width="250" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <RadioButton x:Name="boolCompare" Content="Sync?" Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0" Checked="boolCompare_Checked"/>
+            <Button x:Name="Run" Content="Run Comparing" Grid.Column="0" Click="Run_Click"/>
+        </Grid>
+    </Grid>
+   
+</Window>
